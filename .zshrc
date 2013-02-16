@@ -349,7 +349,7 @@ fi
 
 
 # alias
-alias tmuxx='~/dotfiles/tmuxx'
+alias tmuxx='~/dotfiles/tmuxx/tmuxx'
 alias ll='ls -laG'
 
 alias g='git'
