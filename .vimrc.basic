@@ -1,0 +1,27 @@
+" 基本設定
+
+" 他で書き換えられたら自動で読みなおす
+set autoread
+
+" バックアップ取らない
+set nobackup
+
+" スワップファイル作らない
+set noswapfile
+
+" カレントディレクトリ変更
+augroup grlcd
+		autocmd!
+		autocmd BufEnter * lcd %:p:h
+augroup END
+
+" クリップボードはOS
+" set clipboard+=unnamed
+" ヤンクした文字をクリップボードへ
+" set clipboard=unnamed
+
+
+" ターミナルでマウスを使用する
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2

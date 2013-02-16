@@ -1,0 +1,31 @@
+"NeoBundleでプラグイン管理
+
+set nocompatible               " Be iMproved
+filetype off                   " Required!
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" github
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'koron/chalice'
+NeoBundle 'ynkdir/vim-funlib'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'rosenfeld/conque-term'
+" vim.org
+NeoBundle 'sudo.vim'
+NeoBundle 'DrawIt'
+NeoBundle 'errormarker.vim'
+" NeoBundle 'CSApprox'
+NeoBundle 'wombat256.vim'
+
+filetype plugin indent on

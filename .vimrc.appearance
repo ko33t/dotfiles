@@ -1,0 +1,60 @@
+" 括弧対応
+set showmatch
+" 行番号
+set number
+" 不可視文字
+"set list
+"set listchars=tab:>.,trail:_,extends:>,precedes:<
+" 印字不可能文字
+set display=uhex
+
+" カーソル行をハイライト
+set cursorline
+
+" 全角スペース
+augroup highlightIdegraphicSpace
+		autocmd!
+		autocmd ColorScheme * highlight IdeographicSpace term=underline ctermbg=DarkRed guibg=DarkRed
+		autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+
+" フォント
+set guifont=Ricty_for_Powerline:h10
+" 日本語とかのフォント
+set guifontwide=Ricty:h10
+
+" PowerLineのフォントパッチ
+let g:Powerline_symbols = "compatible"
+" ステータスラインを常に表示
+set laststatus=2
+
+
+if has('gui_macvim')
+	set showtabline=2
+	set transparency=2
+	set antialias
+
+	set guifontwide=Ricty:h14
+	set guifont=Ricty_for_Powerline:h14 
+endif
+
+
+" vimgrepコマンドの検索結果
+augroup grepopen
+		autocmd!
+		autocmd QuickfixCmdPost vimgrep cw
+augroup END
+
+" カラー設定
+if &term =~ "xterm-256color" || "screen-256color"
+  " 256色
+  set t_Co=256
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+endif
+
+colorscheme wombat256mod
+
+
+" Highlight ON
+syntax enable
