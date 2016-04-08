@@ -3,13 +3,23 @@
 set nocompatible               " Be iMproved
 filetype off                   " Required!
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"  call neobundle#rc(expand('~/.vim/bundle/'))
+"endif
+
+if 0 | endif
+
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 " github
-NeoBundle 'Shougo/neobundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'koron/chalice'
@@ -26,6 +36,11 @@ NeoBundle 'sudo.vim'
 NeoBundle 'DrawIt'
 NeoBundle 'errormarker.vim'
 " NeoBundle 'CSApprox'
-NeoBundle 'wombat256.vim'
+NeoBundle 'michalbachowski/vim-wombat256mod'
+
+call neobundle#end()
+
 
 filetype plugin indent on
+
+NeoBundleCheck

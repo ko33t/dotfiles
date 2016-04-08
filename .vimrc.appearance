@@ -45,6 +45,8 @@ augroup grepopen
 		autocmd QuickfixCmdPost vimgrep cw
 augroup END
 
+colorscheme wombat256mod
+
 " カラー設定
 if &term =~ "xterm-256color" || "screen-256color"
   " 256色
@@ -53,7 +55,6 @@ if &term =~ "xterm-256color" || "screen-256color"
   set t_Sb=[4%dm
 endif
 
-colorscheme wombat256mod
 
 
 " Highlight ON

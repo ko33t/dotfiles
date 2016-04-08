@@ -334,13 +334,13 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 ;
 
 ### Title (user@hostname) ###
-case "${TERM}" in
-kterm*|xterm*|)
-  precmd() {
-    echo -ne "\033]0;${USER}@${HOST%%.*}\007"
-  }
-  ;;
-esac
+#case "${TERM}" in
+#kterm*|xterm*|)
+#  precmd() {
+#    echo -ne "\033]0;${USER}@${HOST%%.*}\007"
+#  }
+#  ;;
+#esac
 
 # syntax highlight
 if [ -f ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
